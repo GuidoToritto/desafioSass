@@ -1,0 +1,112 @@
+@import "base/variables";
+@import "base/listas";
+@import "base/mixin";
+@import "base/maps";
+@import "base/extend";
+@import "base/condicionales";
+
+/*estilos de header*/
+header{
+    width: $medida-principal;
+    text-align: $centro;
+    color: $color-letras;
+    padding: 20px;
+    font-family: $fuente;
+    
+
+    /*nesting*/
+    background-color: nth($list: $colores, $n:3 );
+}
+
+body{
+    background-color: $color-secundario;
+}
+
+main{
+    background-color: $color-principal;
+    align-content: $centro;
+    /*utilizando mixin*/ 
+    @include flex-row;
+    .standar{
+        .standar{
+            background-color: map-get($map:$boton-stand , $key: color-standar);
+        }
+    }
+}
+
+li{
+    list-style-type: none;
+}
+.a{
+    text-decoration: none;
+    color: $color-letras;
+    font-family: $fuente;
+}
+.div-botondos{
+    text-decoration: none
+}
+/*ejemplo de extend*/
+
+
+    .div-boton{
+        @extend %botones; 
+
+    }
+    .div-botondos{
+        @extend %botones;  
+    }
+
+.imagen{
+    width: $medida-secundaria;
+}
+
+/*estilos de footer*/
+
+footer{
+    @include medidas(100%, 30px);
+    text-align: center;
+    padding: 20px;
+    font-family: $fuente;
+    background-color: $color-tercero;
+    color: $color-letras;
+    div{
+        @include condicion(white);
+    }
+    color: black;
+}
+
+/*PSEUDO-CLASES*/
+
+.div-boton:hover {
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+.div-boton:visited{
+    color: whitesmoke;
+}
+
+.div-boton:active{
+    font-size: 23px;
+}
+
+div:hover {
+    font-size: 1rem;
+}
+
+.div-botondos:hover {
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+.div-botondos :visited{
+    color: whitesmoke;
+}
+
+.div-botondos :active{
+    font-size: 23px;
+}
+
+div:hover {
+    font-size: 1rem;
+}

@@ -1,0 +1,14 @@
+@mixin condicion($color-dos){
+    background-color: $color-dos;
+
+    /* condicion */ 
+    @if $color-dos == white{
+        border: 1px solid black;
+        margin: 20px;
+
+    }@else{
+        border: 2px solid blue;
+        padding: 20px;
+        margin: 30px;
+    }
+}

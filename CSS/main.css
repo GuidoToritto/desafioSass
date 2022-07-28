@@ -1,0 +1,91 @@
+/*mixin sin parametros*/
+/*mixin con parametros*/
+/*mapas*/
+/*estilos de usuarios normales*/
+.div-boton, .div-botondos {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px; }
+
+/*estilos de header*/
+header {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  /*nesting*/
+  background-color: black; }
+
+body {
+  background-color: #cbcbcb; }
+
+main {
+  background-color: white;
+  align-content: center;
+  /*utilizando mixin*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center; }
+  main .standar .standar {
+    background-color: yellow; }
+
+li {
+  list-style-type: none; }
+
+.a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.div-botondos {
+  text-decoration: none; }
+
+/*ejemplo de extend*/
+.imagen {
+  width: 50%; }
+
+/*estilos de footer*/
+footer {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blue;
+  color: white;
+  color: black; }
+  footer div {
+    background-color: white;
+    /* condicion */
+    border: 1px solid black;
+    margin: 20px; }
+
+/*PSEUDO-CLASES*/
+.div-boton:hover {
+  font-size: 22px;
+  color: whitesmoke; }
+
+.div-boton:visited {
+  color: whitesmoke; }
+
+.div-boton:active {
+  font-size: 23px; }
+
+div:hover {
+  font-size: 1rem; }
+
+.div-botondos:hover {
+  font-size: 22px;
+  color: whitesmoke; }
+
+.div-botondos :visited {
+  color: whitesmoke; }
+
+.div-botondos :active {
+  font-size: 23px; }
+
+div:hover {
+  font-size: 1rem; }
